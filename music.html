@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Her Music ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="navbar">
+      <a class="brand" href="index.html">Ayushi <span>♡</span></a>
+      <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a class="active" href="music.html">MUSIC</a>
+        <a href="memories.html">MEMORIES</a>
+        <a href="birthday.html">BIRTHDAY</a>
+      </div>
+      <span class="nav-heart">♡</span>
+    </nav>
+
+    <main class="content-page music-page">
+      <header class="section-heading">
+        <h1>HER MUSIC <span>♡</span></h1>
+        <p>Songs that live in her heart.</p>
+      </header>
+
+      <section class="player-layout">
+        <div class="record-area">
+          <div class="album-wrap">
+            <img id="albumCover" src="assets/images/music-cover.jpg" alt="Music cover">
+            <div class="record"></div>
+          </div>
+          <p class="music-note">music ♫<br>feels like<br>me ♡</p>
+        </div>
+
+        <div class="playlist-panel">
+          <h2>PLAYLIST <span>♡</span></h2>
+          <div id="playlist" class="playlist">
+            <button class="track active" data-index="0"><span>♫</span><span>Her Song ♡</span><span>♡</span></button>
+            <button class="track" data-index="1"><span>♫</span><span>Her Tune ♡</span><span>♡</span></button>
+            <button class="track" data-index="2"><span>♫</span><span>That One ♡</span><span>♡</span></button>
+            <button class="track" data-index="3"><span>♫</span><span>On Repeat ♡</span><span>♡</span></button>
+            <button class="track" data-index="4"><span>♫</span><span>Just This ♡</span><span>♡</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="player-controls">
+        <div class="progress-wrap">
+          <span id="currentTime">0:00</span>
+          <input id="progress" type="range" min="0" max="100" value="0" aria-label="Song progress">
+          <span id="duration">0:00</span>
+        </div>
+        <div class="controls">
+          <button id="shuffle" aria-label="Shuffle">⤨</button>
+          <button id="prev" aria-label="Previous">◀</button>
+          <button id="play" class="play-btn" aria-label="Play">▶</button>
+          <button id="next" aria-label="Next">▶</button>
+          <button id="repeat" aria-label="Repeat">↻</button>
+        </div>
+        <p id="playerStatus" class="player-status">Add your 5 MP3 files to assets/music/ to start listening.</p>
+      </section>
+    <div class="page-nav">
+  <a href="about.html"><span class="arrow">←</span><span>ABOUT</span></a>
+  <a class="next" href="memories.html"><span>MEMORIES</span><span class="arrow">→</span></a>
+</div>
+    </main>
+  </div>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script src="js/main.js"></script>
+  <script src="js/music.js"></script>
+</body>
+</html>
