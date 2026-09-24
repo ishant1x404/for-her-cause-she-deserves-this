@@ -1,0 +1,31 @@
+*{box-sizing:border-box}
+:root{
+  --paper:#faece9;--paper2:#f6dedb;--rose:#a93445;--rose-dark:#7e2535;
+  --ink:#17151b;--muted:#6c5960;--line:rgba(126,37,53,.18);
+  --shadow:0 18px 45px rgba(94,42,50,.12);
+}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:#ead0cc;color:var(--ink);font-family:"DM Sans",sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(rgba(130,65,65,.25) .7px,transparent .7px);background-size:8px 8px}
+button,a{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+.page-shell{position:relative;min-height:100vh;margin:8px;border-radius:14px;overflow:hidden;background:
+linear-gradient(rgba(255,247,244,.87),rgba(255,241,238,.87)),
+repeating-linear-gradient(0deg,transparent 0 5px,rgba(130,80,80,.025) 6px 7px);
+box-shadow:var(--shadow)}
+.page-shell:after{content:"";position:absolute;inset:0;pointer-events:none;background:
+radial-gradient(circle at 10% 20%,rgba(169,52,69,.12),transparent 18%),
+radial-gradient(circle at 90% 80%,rgba(169,52,69,.10),transparent 20%)}
+.content-page,.home,.birthday-page{position:relative;z-index:1;max-width:1420px;margin:auto;padding:28px 48px 55px}
+.section-heading{text-align:center;margin:12px 0 28px}
+.section-heading h1{margin:0;font-size:32px;letter-spacing:.02em}
+.section-heading h1 span{color:var(--rose)}
+.section-heading p{margin:5px 0;color:#211c20}
+.script-small{font-family:"Great Vibes",cursive;font-size:40px;line-height:1;margin:0}
+.scribble{font-family:"Cormorant Garamond",serif;font-style:italic}
+.tape{position:absolute;width:90px;height:25px;background:rgba(210,152,151,.38);transform:rotate(-8deg);z-index:3}
+@media(max-width:800px){
+  .content-page,.home,.birthday-page{padding:20px 18px 40px}
+  .page-shell{margin:4px}
+}

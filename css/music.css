@@ -1,0 +1,20 @@
+.music-page{min-height:calc(100vh - 96px)}
+.player-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;max-width:1000px;margin:15px auto 25px;align-items:center}
+.record-area{position:relative;display:grid;place-items:center;min-height:420px}
+.album-wrap{position:relative;width:330px;height:280px;display:flex;align-items:center}
+.album-wrap img{position:relative;z-index:2;width:270px;height:270px;object-fit:cover;box-shadow:0 9px 20px rgba(70,35,40,.2);transform:rotate(-2deg)}
+.record{width:250px;height:250px;border-radius:50%;background:repeating-radial-gradient(circle,#191919 0 2px,#292929 3px 4px);margin-left:-65px;position:relative}
+.record:after{content:"";position:absolute;width:58px;height:58px;border-radius:50%;background:#bd4350;left:96px;top:96px;box-shadow:inset 0 0 0 18px #252020}
+.music-note{position:absolute;bottom:0;left:0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;transform:rotate(-5deg)}
+.playlist-panel{padding:20px}
+.playlist-panel h2{color:var(--rose);font-size:18px;margin:0 0 15px}
+.track{width:100%;border:0;background:#efd9d6;border-radius:7px;margin:6px 0;padding:10px 12px;display:grid;grid-template-columns:28px 1fr 25px;gap:8px;text-align:left;color:#552934;transition:.2s}
+.track.active,.track:hover{background:#e7bfc0;transform:translateX(3px)}
+.player-controls{max-width:1000px;margin:auto}
+.progress-wrap{display:grid;grid-template-columns:40px 1fr 40px;gap:10px;align-items:center;font-size:11px}
+#progress{width:100%;accent-color:var(--rose)}
+.controls{display:flex;justify-content:center;align-items:center;gap:38px;margin:15px 0}
+.controls button{border:0;background:none;color:var(--rose-dark);font-size:21px}
+.controls .play-btn{width:54px;height:54px;border-radius:50%;background:var(--rose);color:#fff;font-size:18px}
+.player-status{text-align:center;color:#8a6870;font-size:12px}
+@media(max-width:800px){.player-layout{grid-template-columns:1fr;gap:10px}.record-area{min-height:330px}.album-wrap{transform:scale(.85)}}
